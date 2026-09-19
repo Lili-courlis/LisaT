@@ -231,6 +231,68 @@
     @media (max-width: 480px) {
       .card { padding: 34px 22px; }
     }
+    .photo-background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  background: #0b0b0d;
+}
+
+.photo-background::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 11, 13, 0.65);
+}
+
+.photo-background img {
+  position: absolute;
+  width: 260px;
+  height: 190px;
+  object-fit: cover;
+  border: 8px solid #f5f1e8;
+  box-shadow: 0 15px 40px rgba(0,0,0,.5);
+  opacity: .7;
+}
+
+/* Position des différentes photos */
+
+.photo-background img:nth-child(1) {
+  top: 5%;
+  left: 5%;
+  transform: rotate(-8deg);
+}
+
+.photo-background img:nth-child(2) {
+  top: 8%;
+  right: 5%;
+  transform: rotate(7deg);
+}
+
+.photo-background img:nth-child(3) {
+  bottom: 5%;
+  left: 4%;
+  transform: rotate(6deg);
+}
+
+.photo-background img:nth-child(4) {
+  bottom: 8%;
+  right: 5%;
+  transform: rotate(-7deg);
+}
+
+.photo-background img:nth-child(5) {
+  top: 40%;
+  left: -70px;
+  transform: rotate(-5deg);
+}
+
+.photo-background img:nth-child(6) {
+  top: 42%;
+  right: -70px;
+  transform: rotate(5deg);
+}
   </style>
 </head>
 
