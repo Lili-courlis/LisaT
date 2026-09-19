@@ -163,15 +163,12 @@
   inset: 0;
   z-index: 0;
   overflow: hidden;
-  background: #0b0b0d;
+  background: #ffffff;
 }
 
+/* On enlève le voile sombre */
 .photo-background::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(11, 11, 13, 0.55);
-  z-index: 1;
+  display: none;
 }
 
 .photo-background img {
@@ -180,7 +177,7 @@
   height: 190px;
   object-fit: cover;
   border: 8px solid #f5f1e8;
-  box-shadow: 0 15px 40px rgba(0,0,0,.5);
+  box-shadow: 0 15px 40px rgba(0,0,0,.35);
   opacity: 1;
   z-index: 0;
 }
