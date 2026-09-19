@@ -145,6 +145,8 @@
 
     .secret {
       display: none;
+      position: relative;
+      z-index: 1;
     }
 
     .secret.show {
@@ -153,6 +155,8 @@
     }
 
     .secret .card {
+      position: relative;
+      z-index: 2;
       max-width: 720px;
       width: min(720px, 100%);
       padding: 55px 34px;
@@ -231,68 +235,69 @@
     @media (max-width: 480px) {
       .card { padding: 34px 22px; }
     }
+
     .photo-background {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  overflow: hidden;
-  background: #0b0b0d;
-}
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+      background: #0b0b0d;
+    }
 
-.photo-background::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(11, 11, 13, 0.65);
-}
+    .photo-background::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(11, 11, 13, 0.65);
+    }
 
-.photo-background img {
-  position: absolute;
-  width: 260px;
-  height: 190px;
-  object-fit: cover;
-  border: 8px solid #f5f1e8;
-  box-shadow: 0 15px 40px rgba(0,0,0,.5);
-  opacity: .7;
-}
+    .photo-background img {
+      position: absolute;
+      width: 260px;
+      height: 190px;
+      object-fit: cover;
+      border: 8px solid #f5f1e8;
+      box-shadow: 0 15px 40px rgba(0,0,0,.5);
+      opacity: .7;
+    }
 
-/* Position des différentes photos */
+    /* Position des différentes photos */
 
-.photo-background img:nth-child(1) {
-  top: 5%;
-  left: 5%;
-  transform: rotate(-8deg);
-}
+    .photo-background img:nth-child(1) {
+      top: 5%;
+      left: 5%;
+      transform: rotate(-8deg);
+    }
 
-.photo-background img:nth-child(2) {
-  top: 8%;
-  right: 5%;
-  transform: rotate(7deg);
-}
+    .photo-background img:nth-child(2) {
+      top: 8%;
+      right: 5%;
+      transform: rotate(7deg);
+    }
 
-.photo-background img:nth-child(3) {
-  bottom: 5%;
-  left: 4%;
-  transform: rotate(6deg);
-}
+    .photo-background img:nth-child(3) {
+      bottom: 5%;
+      left: 4%;
+      transform: rotate(6deg);
+    }
 
-.photo-background img:nth-child(4) {
-  bottom: 8%;
-  right: 5%;
-  transform: rotate(-7deg);
-}
+    .photo-background img:nth-child(4) {
+      bottom: 8%;
+      right: 5%;
+      transform: rotate(-7deg);
+    }
 
-.photo-background img:nth-child(5) {
-  top: 40%;
-  left: -70px;
-  transform: rotate(-5deg);
-}
+    .photo-background img:nth-child(5) {
+      top: 40%;
+      left: -70px;
+      transform: rotate(-5deg);
+    }
 
-.photo-background img:nth-child(6) {
-  top: 42%;
-  right: -70px;
-  transform: rotate(5deg);
-}
+    .photo-background img:nth-child(6) {
+      top: 42%;
+      right: -70px;
+      transform: rotate(5deg);
+    }
   </style>
 </head>
 
@@ -325,55 +330,54 @@
     <div class="footer">Classification : très, très importante</div>
   </main>
 
-   
-     <!-- PAGE SECRÈTE -->
-<main id="secretPage" class="secret">
+  <!-- PAGE SECRÈTE -->
+  <main id="secretPage" class="secret">
 
-  <div class="photo-background">
-    <img src="images/LisaT1.jpg">
-    <img src="images/LisaT2.jpg">
-    <img src="images/LisaT3.png">
-    <img src="images/LisaT4.JPG">
-    <img src="images/LisaT5.JPG">
-    <img src="images/LisaT6.jpg">
-  </div>
-
-  <section class="card">
-    <div class="symbol">💍</div>
-    <div class="eyebrow">Dossier déclassifié</div>
-
-    <h1>Une mission très spéciale</h1>
-
-    <p class="message">
-      Coucou Choupi ! ❤️
-    </p>
-
-    <p class="message">
-      Après t’être remémoré quelques souvenirs et avoir déchiffré mon énigme,
-      il est désormais temps pour moi de te poser une question...
-    </p>
-
-    <p class="message">
-      Cela me ferait tellement plaisir que tu continues à partager
-      les moments importants de ma vie.
-    </p>
-
-    <p class="message">
-      J’espère que tu es disponible les
-      <strong>21 août et 4 septembre 2027</strong>...
-    </p>
-
-    <div class="question">
-      Accepterais-tu<br>
-      <strong>d’être ma témoin de mariage ?</strong>
+    <div class="photo-background">
+      <img src="images/LisaT1.jpg">
+      <img src="images/LisaT2.jpg">
+      <img src="images/LisaT3.png">
+      <img src="images/LisaT4.JPG">
+      <img src="images/LisaT5.JPG">
+      <img src="images/LisaT6.jpg">
     </div>
 
-    <div class="heart">❤️</div>
+    <section class="card">
+      <div class="symbol">💍</div>
+      <div class="eyebrow">Dossier déclassifié</div>
 
-    <div class="footer">Avec tout mon amour</div>
-  </section>
+      <h1>Une mission très spéciale</h1>
 
-</main>
+      <p class="message">
+        Coucou Choupi ! ❤️
+      </p>
+
+      <p class="message">
+        Après s’être remémoré quelques souvenirs et avoir déchiffré mon énigme,
+        il est désormais temps pour moi de te poser une question...
+      </p>
+
+      <p class="message">
+        Cela me ferait tellement plaisir que tu continues à partager
+        les moments importants de ma vie.
+      </p>
+
+      <p class="message">
+        J’espère que tu es disponible les
+        <strong>21 août et 4 septembre 2027</strong>...
+      </p>
+
+      <div class="question">
+        Accepterais-tu<br>
+        <strong>d’être ma témoin de mariage ?</strong>
+      </div>
+
+      <div class="heart">❤️</div>
+
+      <div class="footer">Avec tout mon amour</div>
+    </section>
+
+  </main>
 
   <script>
     /*
