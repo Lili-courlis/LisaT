@@ -143,24 +143,55 @@
       margin: 14px 0 0;
     }
 
-    .secret {
-      display: none;
-      position: relative;
-      z-index: 1;
-    }
+  .secret {
+  display: none;
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
 
-    .secret.show {
-      display: block;
-      animation: reveal 1.2s ease both;
-    }
+.secret.show {
+  display: flex;
+  animation: reveal 1.2s ease both;
+}
 
-    .secret .card {
-      position: relative;
-      z-index: 2;
-      max-width: 720px;
-      width: min(720px, 100%);
-      padding: 55px 34px;
-    }
+.photo-background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background: #0b0b0d;
+}
+
+.photo-background::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 11, 13, 0.55);
+  z-index: 1;
+}
+
+.photo-background img {
+  position: absolute;
+  width: 260px;
+  height: 190px;
+  object-fit: cover;
+  border: 8px solid #f5f1e8;
+  box-shadow: 0 15px 40px rgba(0,0,0,.5);
+  opacity: .8;
+  z-index: 0;
+}
+
+.secret .card {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  width: min(720px, 100%);
+  padding: 55px 34px;
+}
 
     .secret h1 {
       font-size: clamp(32px, 8vw, 54px);
